@@ -1,4 +1,13 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Header() {
+  const pathName = usePathname();
+  const getStatus = (path: string) =>
+    `animate-underline ${pathName === path ? "active" : ""}`;
+
   return (
     <header className="w-full">
       <div
@@ -8,18 +17,12 @@ export default function Header() {
         <span className="text-[0.875rem]">placeholder</span>
 
         <nav className="flex gap-8 text-[0.875rem] italic">
-          <a
-            href="/"
-            className="animate-underline"
-          >
+          <Link href="/" className={getStatus("/")}>
             about
-          </a>
-          <a
-            href="/play"
-            className="animate-underline"
-          >
+          </Link>
+          <Link href="/play" className={getStatus("/play")}>
             play
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
