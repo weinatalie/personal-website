@@ -1,18 +1,28 @@
 import ScrollSvg from "../../components/ScrollSvg";
 
 export default function About() {
-  const svgPath = "M88,372 Q104,435 162,450 Q220,465 268,418 Q316,371 370,355 Q424,339 442,310 Q460,281 475,255 Q490,229 475,195";
-
   return (
-    <main className="min-h-screen flex items-center justify-center px-12 md:px-20 pt-12 md:pt-20 pb-[124px] md:pb-[156px]">
-
-      <ScrollSvg 
-        path={svgPath} 
-        viewBox="0 0 500 500"
-        color="var(--accent)" 
-        className="fixed top-0 left-0 pointer-events-none w-full max-w-[600px] -ml-24 md:-ml-32 -mt-64 md:-mt-80"
+    <main className="relative min-h-screen flex items-center justify-center px-12 md:px-20 pt-12 md:pt-20 pb-[156px] md:pb-[156px] overflow-hidden">
+      {/* SVGs */}
+      <ScrollSvg
+        path="M2.6582 155C43.0582 232.2 110.158 256.501 151.158 256.501C199.905 256.501 242.658 192.501 291.658 162.001C340.658 131.501 360.158 137.154 393.658 127.501C439.158 114.391 453.201 77.9567 466.658 56.0011C485.658 25.0015 507.658 2.99992 522.658 3"
+        viewBox="0 0 523 260"
+        color="var(--accent)"
+        strokeWidth={5.41}
+        customRange={[0, 0.5]}
+        className="absolute md:fixed top-0 left-0 pointer-events-none w-full max-w-[600px] -ml-16 md:-ml-12 -mt-16 md:-mt-12"
       />
 
+      <ScrollSvg
+        path="M378.868 183C403.619 75.9264 332.349 3 266.62 3C200.892 3 207.923 101.204 128.621 81C50.1211 61 -11.379 91.5 5.9372 183"
+        viewBox="0 0 387 184"
+        color="var(--accent)"
+        strokeWidth={4}
+        customRange={[0.5, 1]}
+        className="absolute md:fixed z-20 bottom-0 right-0 pointer-events-none w-full max-w-[600px] -mr-32 -md:-mr-12 -mb-20 md:-mb-32"
+      />
+
+      {/* Portrait */}
       <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-16 md:gap-20 items-start max-w-4xl w-full">
         <div className="flex justify-center md:justify-end md:pt-8">
           <div className="w-full aspect-[4/5] bg-[var(--secondary)]/10 overflow-hidden">
@@ -24,6 +34,7 @@ export default function About() {
           </div>
         </div>
 
+        {/* Text */}
         <div className="flex flex-col gap-2 md:gap-4">
           <section className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
