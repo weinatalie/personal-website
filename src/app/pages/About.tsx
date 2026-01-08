@@ -2,7 +2,6 @@
 import { motion, Variants } from "framer-motion";
 import ScrollSvg from "../../components/ScrollSvg";
 import HoverText from "../../components/HoverText";
-import WaveText from "../../components/WaveText";
 import portraitImg from "../../images/test.png";
 
 export default function About() {
@@ -64,9 +63,11 @@ export default function About() {
               alt="Self-portrait"
               className="w-full h-auto"
             />
-            <span className="text-[1.25rem] text-[var(--alt-accent)]">
-              <WaveText text="⋆ . ⭒ 🖍️ ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊˚ . ⋆" />
-            </span>
+
+            <HoverText
+              className="text-[1.25rem] text-[var(--alt-accent)]"
+              text="⋆ . ⭒ 🖍️ ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊ ˚ ⋅ ⭒ . ⋆"
+            />
           </motion.div>
         </motion.div>
 

@@ -9,7 +9,7 @@ interface HoverTextProps {
 
 export default function HoverText({ text, className }: HoverTextProps) {
   const [index, setIndex] = useState<number | null>(null);
-  const characters = text.split("");
+  const characters = Array.from(text);
 
   return (
     <div
