@@ -65,8 +65,8 @@ export default function About() {
             />
 
             <HoverText
-              className="text-[1.125rem] text-[var(--accent-secondary-color)]"
-              text="⋆ . ⭒ 🖍️ ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊ ˚ ⋅ ⭒ . ⋆"
+              className="text-[1.125rem] text-[var(--text-accent-color)]"
+              text="⋆ . ⭒ 🌱 ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊ ˚ ⋅ ⭒ . ⋆"
             />
           </motion.div>
         </motion.div>
@@ -123,7 +123,7 @@ export default function About() {
                 <a
                   href="mailto:nataliewei@berkeley.edu"
                   target="_blank"
-                  className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                  className="decoration-[var(--text-color)] peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                 >
                   nataliewei at berkeley dot edu
                 </a>{" "}
@@ -139,7 +139,7 @@ export default function About() {
                 custom={{ offset: 12 }}
                 variants={children}
                 style={{ fontFamily: "var(--heading-font)" }}
-                className="text-[0.9375rem] font-medium"
+                className="text-[text-[0.9375rem] font-medium"
               >
                 Previously, I:
               </motion.h2>
@@ -154,7 +154,7 @@ export default function About() {
                   <a
                     href="https://stripe.com/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Stripe
                   </a>
@@ -164,7 +164,7 @@ export default function About() {
                   <a
                     href="https://cs184.eecs.berkeley.edu/su25/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Computer Graphics
                   </a>{" "}
@@ -172,7 +172,7 @@ export default function About() {
                   <a
                     href="https://cal-cs180.github.io/fa25/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Computer Vision
                   </a>
@@ -182,7 +182,7 @@ export default function About() {
                   <a
                     href="https://www.bluebonnetdata.org/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     progressive campaigns
                   </a>
@@ -192,7 +192,7 @@ export default function About() {
                   <a
                     href="https://codeology.studentorg.berkeley.edu/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     explore the software space
                   </a>
@@ -202,7 +202,7 @@ export default function About() {
                   <a
                     href="https://www.calhacks.io/"
                     target="_blank"
-                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     world’s largest collegiate hackathon
                   </a>
@@ -224,21 +224,21 @@ export default function About() {
                 style={{ fontFamily: "var(--heading-font)" }}
                 className="font-medium text-[0.9375rem]"
               >
-                Other places you can find me:
+                Where to find me:
               </h2>
               <div>
                 <span>
                   <a
                     href="https://www.linkedin.com/in/natalie-wei/"
                     target="_blank"
-                    className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     LinkedIn
                   </a>{" "}
                   <span className="inline-block transition-transform duration-300 ease-in-out peer-hover:-translate-y-0.75">
                     🔗
                   </span>
-                  <span className="text-[var(--text-color)] italic mx-4">
+                  <span className="text-[var(--text-color)] italic mx-2">
                     /
                   </span>
                 </span>
@@ -246,7 +246,7 @@ export default function About() {
                   <a
                     href="https://github.com/weinatalie"
                     target="_blank"
-                    className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="decoration-[var(--text-color)] peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Github
                   </a>{" "}
