@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const pathName = usePathname();
   const getStatus = (path: string) =>
-    `animate-underline ${pathName === path ? "active" : ""}`;
+    `animate-header-underline ${pathName === path ? "active" : ""}`;
 
   return (
     <header className="w-full">

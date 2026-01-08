@@ -39,7 +39,7 @@ export default function About() {
       <ScrollSvg
         path="M378.868 183C403.619 75.9264 332.349 3 266.62 3C200.892 3 207.923 101.204 128.621 81C50.1211 61 -11.379 91.5 5.9372 183"
         viewBox="0 0 387 184"
-        color="var(--accent)"
+        color="var(--accent-primary-color)"
         strokeWidth={3.5}
         range={[0.2, 0.8]}
         className="absolute md:fixed z-20 bottom-0 right-0 pointer-events-none w-full max-w-[600px] -mr-24 md:-mr-12 -mb-24 md:-mb-28"
@@ -65,7 +65,7 @@ export default function About() {
             />
 
             <HoverText
-              className="text-[1.25rem] text-[var(--alt-accent)]"
+              className="text-[1.125rem] text-[var(--accent-secondary-color)]"
               text="⋆ . ⭒ 🖍️ ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊ ˚ ⋅ ⭒ . ⋆"
             />
           </motion.div>
@@ -89,7 +89,7 @@ export default function About() {
                 </span>
                 <HoverText
                   text="Natalie Wei."
-                  className="text-[var(--accent)] text-[1.5rem]"
+                  className="text-[var(--accent-primary-color)] text-[1.5rem]"
                 />
               </h1>
             </motion.div>
@@ -123,7 +123,7 @@ export default function About() {
                 <a
                   href="mailto:nataliewei@berkeley.edu"
                   target="_blank"
-                  className="peer inline-block text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                  className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                 >
                   nataliewei at berkeley dot edu
                 </a>{" "}
@@ -154,7 +154,7 @@ export default function About() {
                   <a
                     href="https://stripe.com/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Stripe
                   </a>
@@ -164,7 +164,7 @@ export default function About() {
                   <a
                     href="https://cs184.eecs.berkeley.edu/su25/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Computer Graphics
                   </a>{" "}
@@ -172,7 +172,7 @@ export default function About() {
                   <a
                     href="https://cal-cs180.github.io/fa25/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Computer Vision
                   </a>
@@ -182,7 +182,7 @@ export default function About() {
                   <a
                     href="https://www.bluebonnetdata.org/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     progressive campaigns
                   </a>
@@ -192,7 +192,7 @@ export default function About() {
                   <a
                     href="https://codeology.studentorg.berkeley.edu/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     explore the software space
                   </a>
@@ -202,7 +202,7 @@ export default function About() {
                   <a
                     href="https://www.calhacks.io/"
                     target="_blank"
-                    className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     world’s largest collegiate hackathon
                   </a>
@@ -231,14 +231,14 @@ export default function About() {
                   <a
                     href="https://www.linkedin.com/in/natalie-wei/"
                     target="_blank"
-                    className="peer inline-block text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     LinkedIn
                   </a>{" "}
                   <span className="inline-block transition-transform duration-300 ease-in-out peer-hover:-translate-y-0.75">
                     🔗
                   </span>
-                  <span className="text-[var(--alt-accent)] italic mx-4">
+                  <span className="text-[var(--text-color)] italic mx-4">
                     /
                   </span>
                 </span>
@@ -246,7 +246,7 @@ export default function About() {
                   <a
                     href="https://github.com/weinatalie"
                     target="_blank"
-                    className="peer inline-block text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
+                    className="peer inline-block text-[var(--text-color)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Github
                   </a>{" "}
