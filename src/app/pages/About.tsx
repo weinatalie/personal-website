@@ -2,6 +2,8 @@
 import { motion, Variants } from "framer-motion";
 import ScrollSvg from "../../components/ScrollSvg";
 import HoverText from "../../components/HoverText";
+import WaveText from "../../components/WaveText";
+import portraitImg from "../../images/test.png";
 
 export default function About() {
   // Fade-in slide-in animation
@@ -44,25 +46,28 @@ export default function About() {
         className="absolute md:fixed z-20 bottom-0 right-0 pointer-events-none w-full max-w-[600px] -mr-24 md:-mr-12 -mb-24 md:-mb-28"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-16 md:gap-20 items-start max-w-4xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-20 md:gap-24 items-start max-w-[60rem] w-full">
         {/* Portrait */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.1,
-            duration: 0.8,
-            ease: [0.215, 0.61, 0.355, 1.0],
-          }}
-          className="flex justify-center md:justify-end md:pt-8"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col items-center md:pt-10"
         >
-          <div className="w-full aspect-[4/5] bg-[var(--secondary)]/10 overflow-hidden">
+          <motion.div
+            custom={{ offset: 30 }}
+            variants={children}
+            className="flex flex-col items-center gap-5 md:gap-6"
+          >
             <img
-              src="/api/placeholder/600/750"
-              alt="Portrait"
-              className="w-full h-full object-cover"
+              src={portraitImg.src}
+              alt="Self-portrait"
+              className="w-full h-auto"
             />
-          </div>
+            <span className="text-[1.25rem] text-[var(--alt-accent)]">
+              <WaveText text="⋆ . ⭒ 🖍️ ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊˚ . ⋆" />
+            </span>
+          </motion.div>
         </motion.div>
 
         {/* Text */}
@@ -78,12 +83,12 @@ export default function About() {
                 style={{ fontFamily: "var(--heading-font)" }}
                 className="flex flex-col gap-1 md:gap-2 group font-medium"
               >
-                <span className="inline-block text-[0.875rem] transition-transform duration-300 ease-in-out group-has-[.in-range:hover]:-translate-y-1">
+                <span className="inline-block text-[0.9375rem] transition-transform duration-300 ease-in-out group-has-[.in-range:hover]:-translate-y-1">
                   Hi! I'm
                 </span>
                 <HoverText
                   text="Natalie Wei."
-                  className="text-[var(--accent)] text-[1.375rem]"
+                  className="text-[var(--accent)] text-[1.5rem]"
                 />
               </h1>
             </motion.div>
@@ -103,13 +108,13 @@ export default function About() {
                 I'm broadly passionate about democratizing technology through
                 meaningful product work. Drawing from my interdisciplinary
                 background, I'm also fascinated by the potential of code as a
-                medium for creative expression.
+                creative medium.
               </p>
 
               <p>
-                On the side, I enjoy dabbling in digital art, reading
-                speculative fiction, and try-harding the NYT mini crossword (my
-                personal record: 10 seconds).
+                On the side, I enjoy creating digital art, reading speculative
+                fiction, and try-harding the NYT mini crossword (my personal
+                record: 10 seconds).
               </p>
 
               <p>
@@ -130,9 +135,10 @@ export default function About() {
 
             <div className="flex flex-col gap-4">
               <motion.h2
+                custom={{ offset: 12 }}
                 variants={children}
                 style={{ fontFamily: "var(--heading-font)" }}
-                className="text-[0.875rem] font-medium"
+                className="text-[0.9375rem] font-medium"
               >
                 Previously, I:
               </motion.h2>
@@ -143,14 +149,14 @@ export default function About() {
                 className="text-[0.875rem] list-disc ml-4 space-y-2"
               >
                 <li>
-                  built back-end infrastructure for new product features at{" "}
+                  built back-end infrastructure for user balances at{" "}
                   <a
                     href="https://stripe.com/"
                     target="_blank"
                     className="text-[var(--alt-accent)] animate-underline underline underline-offset-4 decoration-[1.5px] hover:no-underline"
                   >
                     Stripe
-                  </a>{" "}
+                  </a>
                 </li>
                 <li>
                   taught upper division{" "}
@@ -171,7 +177,7 @@ export default function About() {
                   </a>
                 </li>
                 <li>
-                  developed data and technology-driven tools for{" "}
+                  developed data-driven tools for{" "}
                   <a
                     href="https://www.bluebonnetdata.org/"
                     target="_blank"
@@ -181,7 +187,7 @@ export default function About() {
                   </a>
                 </li>
                 <li>
-                  made it easier for students to{" "}
+                  made it easier for college students to{" "}
                   <a
                     href="https://codeology.studentorg.berkeley.edu/"
                     target="_blank"
@@ -215,7 +221,7 @@ export default function About() {
             >
               <h2
                 style={{ fontFamily: "var(--heading-font)" }}
-                className="font-medium "
+                className="font-medium text-[0.9375rem]"
               >
                 Other places you can find me:
               </h2>
@@ -231,7 +237,9 @@ export default function About() {
                   <span className="inline-block transition-transform duration-300 ease-in-out peer-hover:-translate-y-0.75">
                     🔗
                   </span>
-                  <span className="text-[var(--alt-accent)] italic mx-4">/</span>
+                  <span className="text-[var(--alt-accent)] italic mx-4">
+                    /
+                  </span>
                 </span>
                 <span>
                   <a

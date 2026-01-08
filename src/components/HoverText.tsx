@@ -14,7 +14,6 @@ export default function HoverText({ text, className }: HoverTextProps) {
   return (
     <div
       className={`flex select-none ${className}`}
-      // Safety net: force reset if the mouse leaves the entire area
       onMouseLeave={() => setIndex(null)}
     >
       {characters.map((char, i) => {
@@ -36,7 +35,7 @@ export default function HoverText({ text, className }: HoverTextProps) {
               display: "inline-block",
               padding: "0 0.5px" 
             }}
-            className={i < 7 ? "in-range" : ""}
+            className={i < 6 ? "in-range" : ""}
           >
             <motion.span
               animate={{ y }}
