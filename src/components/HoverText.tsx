@@ -5,19 +5,34 @@ import { motion } from "framer-motion";
 interface HoverTextProps {
   text: string;
   className?: string;
+  colorOne: string;
+  colorTwo: string;
+  onRangeChange?: (inRange: boolean) => void;
 }
 
-export default function HoverText({ text, className }: HoverTextProps) {
+export default function HoverText({
+  text,
+  className,
+  colorOne,
+  colorTwo,
+  onRangeChange,
+}: HoverTextProps) {
   const [index, setIndex] = useState<number | null>(null);
   const characters = Array.from(text);
+  const totalChars = characters.length;
 
   return (
     <div
       className={`flex select-none ${className}`}
-      onMouseLeave={() => setIndex(null)}
+      onMouseLeave={() => {
+        setIndex(null);
+        onRangeChange?.(false);
+      }}
     >
       {characters.map((char, i) => {
         const distance = index !== null ? Math.abs(i - index) : null;
+        const percentage = (i / (totalChars - 1)) * 100;
+        const charColor = `color-mix(in srgb, ${colorOne}, ${colorTwo} ${percentage}%)`;
 
         let y = 0;
         if (distance === 0) y = -10;
@@ -29,13 +44,17 @@ export default function HoverText({ text, className }: HoverTextProps) {
         return (
           <span
             key={i}
-            onMouseEnter={() => setIndex(i)}
-            style={{ 
-              position: "relative", 
-              display: "inline-block",
-              padding: "0 0.5px" 
+            onMouseEnter={() => {
+              setIndex(i);
+              onRangeChange?.(i < 6);
             }}
-            className={i < 6 ? "in-range" : ""}
+            style={{
+              position: "relative",
+              display: "inline-block",
+              padding: "0 0.5px",
+              color: charColor, 
+            }}
+            className={i < 6 ? "in-range" : "out-of-range"}
           >
             <motion.span
               animate={{ y }}
@@ -49,7 +68,7 @@ export default function HoverText({ text, className }: HoverTextProps) {
                 display: "inline-block",
                 willChange: "transform",
                 whiteSpace: "pre",
-                pointerEvents: "none", 
+                pointerEvents: "none",
               }}
             >
               {char}

@@ -65,8 +65,10 @@ export default function About() {
             />
 
             <HoverText
-              className="text-[1.125rem] text-[var(--text-accent-color)]"
+              className="text-[1.125rem]"
               text="⋆ . ⭒ 🌱 ⋆ ｡˚ ‧ ₊ ✮ ‧ ₊ ˚ ⋅ ⭒ . ⋆"
+              colorOne="var(--text-accent-color)"
+              colorTwo="var(--accent-secondary-color)"
             />
           </motion.div>
         </motion.div>
@@ -89,7 +91,9 @@ export default function About() {
                 </span>
                 <HoverText
                   text="Natalie Wei."
-                  className="text-[var(--accent-primary-color)] text-[1.5rem]"
+                  colorOne="var(--accent-primary-color)"
+                  colorTwo="var(--accent-primary-color)"
+                  className="text-[1.5rem]"
                 />
               </h1>
             </motion.div>
