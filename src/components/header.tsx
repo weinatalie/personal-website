@@ -1,7 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import headerImage from "../images/header.png";
 
 export default function Header() {
   const pathName = usePathname();
@@ -12,11 +12,11 @@ export default function Header() {
     <header className="w-full">
       <div
         style={{ fontFamily: "var(--heading-font)" }}
-        className="flex items-center justify-between px-12 py-14"
+        className="flex items-center justify-between px-24 py-14"
       >
-        <span className="text-[0.875rem]">placeholder</span>
+        <span></span>
 
-        <nav className="flex gap-8 text-[0.875rem] italic">
+        <nav className="flex gap-12 text-[0.875rem] italic">
           <Link href="/" className={getStatus("/")}>
             about
           </Link>
