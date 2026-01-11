@@ -72,7 +72,6 @@
     position: relative;
   }
 
-  .animate-header-underline:hover,
   .animate-header-underline.active {
     color: var(--accent-primary-color);
   }
@@ -112,7 +111,7 @@
   --heading-font: "DM Mono";
   --body-font: "Geist";
 
-  --background-color: #fff8ec;
+  --background-color: #fff9ee;
   --text-color: #3e1a15;
   --accent-secondary-color: #c5c685;
   --accent-primary-color: #f74a3a;

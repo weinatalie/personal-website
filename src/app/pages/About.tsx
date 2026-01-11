@@ -19,7 +19,7 @@ export default function About() {
   const children: Variants = {
     hidden: ({ offset, blur }: { offset?: number; blur?: number } = {}) => ({
       opacity: 0,
-      y: offset || 20,
+      y: offset || 16,
       filter: `blur(${blur ?? 0}px)`,
     }),
     visible: {
@@ -28,7 +28,7 @@ export default function About() {
       filter: "blur(0px)",
       transition: {
         duration: 0.8,
-        ease: [0.215, 0.61, 0.355, 1.0],
+        ease: [0.25, 0.8, 0.25, 1.0],
       },
     },
   };
@@ -54,7 +54,7 @@ export default function About() {
           className="flex flex-col items-center md:pt-10"
         >
           <motion.div
-            custom={{ offset: 30 }}
+            custom={{ offset: 12 }}
             variants={children}
             className="flex flex-col items-center gap-5 md:gap-6"
           >
@@ -81,7 +81,11 @@ export default function About() {
           className="flex flex-col"
         >
           <div className="flex flex-col gap-5 md:gap-6 leading-[1.56]">
-            <motion.div variants={children} className="flex flex-col">
+            <motion.div
+              custom={{ offset: 12, blur: 2 }}
+              variants={children}
+              className="flex flex-col"
+            >
               <h1
                 style={{ fontFamily: "var(--heading-font)" }}
                 className="flex flex-col gap-1 md:gap-2 group font-medium"
@@ -99,7 +103,6 @@ export default function About() {
             </motion.div>
 
             <motion.div
-              custom={{ offset: 12, blur: 2 }}
               variants={children}
               className="flex flex-col gap-4 text-[0.875rem]"
             >
@@ -117,8 +120,8 @@ export default function About() {
               </p>
 
               <p>
-                On the side, I enjoy creating digital art and reading speculative
-                fiction.
+                On the side, I enjoy creating digital art and reading
+                speculative fiction.
               </p>
 
               <p>
@@ -137,21 +140,18 @@ export default function About() {
               </p>
             </motion.div>
 
-            <div className="flex flex-col gap-4">
-              <motion.h2
-                custom={{ offset: 12 }}
-                variants={children}
+            <motion.div
+              variants={children}
+              className="flex flex-col gap-4"
+            >
+              <h2
                 style={{ fontFamily: "var(--heading-font)" }}
                 className="text-[text-[0.9375rem] font-medium"
               >
                 Previously, I:
-              </motion.h2>
+              </h2>
 
-              <motion.ul
-                custom={{ offset: 12, blur: 2 }}
-                variants={children}
-                className="text-[0.875rem] list-disc ml-4 space-y-2"
-              >
+              <motion.ul className="text-[0.875rem] list-disc ml-4 space-y-2">
                 <li>
                   built back-end infrastructure for user balances at{" "}
                   <a
@@ -211,17 +211,11 @@ export default function About() {
                   </a>
                 </li>
               </motion.ul>
-            </div>
+            </motion.div>
 
             <motion.div
+              variants={children}
               className="flex flex-col gap-4 text-[0.875rem]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.1,
-                duration: 0.8,
-                ease: [0.215, 0.61, 0.355, 1.0],
-              }}
             >
               <h2
                 style={{ fontFamily: "var(--heading-font)" }}
