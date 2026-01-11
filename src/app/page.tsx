@@ -1,5 +1,5 @@
 import Image from "next/image";
-import About from "./pages/About";
+import About from "./about/page";
 
 function App() {
   return (

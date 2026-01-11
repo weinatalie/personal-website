@@ -1,10 +1,1 @@
-import Image from "next/image";
-import Play from "../pages/Play";
-
-function App() {
-  return (
-    <Play/>
-  );
-}
-
-export default App;
+export default function Play() {}
